@@ -85,8 +85,6 @@ public class Exer05 {
         
         Navio petroleiro = new Petroleiro(matricula, nome, comprimento, capacidade);
         porto.adicionaNavio(petroleiro);
-        
-        System.out.println("Navio adicionado ao porto");
     }
 
     private static void criarPortaContentores() {
@@ -102,8 +100,6 @@ public class Exer05 {
         
         Navio portaContentores = new PortaContentores(matricula, nome, comprimento, numMaxContentores);
         porto.adicionaNavio(portaContentores);
-        
-        System.out.println("Navio adicionado ao porto");
     }
     
 }

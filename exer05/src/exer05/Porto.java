@@ -18,7 +18,14 @@ public class Porto {
     }
     
     public void adicionaNavio(Navio navio){
+        for(Navio n: navios){
+            if(navio.getMatricula().equals(n.getMatricula())){
+                System.out.println("Matricula ja existe no porto");
+                return;
+            }
+        }
         navios.add(navio);
+        System.out.println("Navio adicionado ao porto");
     }
     
     public int nContentores(){
