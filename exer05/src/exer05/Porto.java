@@ -7,16 +7,23 @@ package exer05;
 import java.util.*;
 
 /**
- *
+ * Class Porto que vai armazenar todas as informações relativa aos navios
  * @author rfcm2
  */
 public class Porto {
     private ArrayList<Navio> navios;
 
+    /**
+     * Construtor que inicializada todas as variaveis pretencentes à class Porto
+     */
     public Porto() {
         this.navios = new ArrayList<>();
     }
     
+    /**
+     * metodo que armazena um novo navio no Porto se a matricula deste for unica
+     * @param navio
+     */
     public void adicionaNavio(Navio navio){
         for(Navio n: navios){
             if(navio.getMatricula().equals(n.getMatricula())){
@@ -28,6 +35,10 @@ public class Porto {
         System.out.println("Navio adicionado ao porto");
     }
     
+    /**
+     * metodo que retorna a soma de todos os contentores existentes em todos os navios do Porto
+     * @return
+     */
     public int nContentores(){
         int nContentores = 0;
         for(Navio n: navios){
@@ -38,6 +49,10 @@ public class Porto {
         return nContentores;
     }
     
+    /**
+     * metodo responsavel por retornar a capacidade total dos navios em litros
+     * @return
+     */
     public float capacidadeTotal(){
         float capacidade = 0;
         for(Navio n: navios){
