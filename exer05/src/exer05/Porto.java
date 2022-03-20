@@ -77,7 +77,7 @@ public class Porto {
         return "Erro ao adicionar navio ao porto";
     }
     
-    public int nCOntentores(){
+    public int nContentores(){
         int nContentores = 0;
         for(Navio n: navios){
             if(n instanceof PortaContentores){
