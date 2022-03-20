@@ -17,64 +17,8 @@ public class Porto {
         this.navios = new ArrayList<>();
     }
     
-    public String adicionarNavio(String matricula, String nome, float comprimento){
-        if(this.navios.isEmpty()){
-            Navio navio = new Navio(matricula, nome, comprimento);
-            this.navios.add(navio);
-            return "Navio adicionado ao porto com sucesso";
-        }
-        else{
-            for(Navio n: navios){
-                if(n.getMatricula().equals(matricula))
-                    return "Navio já existe";
-                else{
-                    Navio navio = new Navio(matricula, nome, comprimento);
-                    navios.add(navio);
-                    return "Navio adicionado ao porto com sucesso";
-                }
-            }
-        }
-        return "Erro ao adicionar navio ao porto";
-    }
-    
-    public String adicionarPortaContentores(String matricula, String nome, float comprimento, int numMaxContentores){
-        if(this.navios.isEmpty()){
-            Navio navio = new PortaContentores(matricula, nome, comprimento, numMaxContentores);
-            this.navios.add(navio);
-            return "Navio adicionado ao porto com sucesso";
-        }
-        else{
-            for(Navio n: navios){
-                if(n.getMatricula().equals(matricula))
-                    return "Navio já existe";
-                else{
-                    Navio navio = new PortaContentores(matricula, nome, comprimento, numMaxContentores);
-                    navios.add(navio);
-                    return "Navio adicionado ao porto com sucesso";
-                }
-            }
-        }
-        return "Erro ao adicionar navio ao porto";
-    }
-    
-    public String adicionarPetroleiro(String matricula, String nome, float comprimento, float capacidade){
-        if(this.navios.isEmpty()){
-            Navio navio = new Petroleiro(matricula, nome, comprimento, capacidade);
-            this.navios.add(navio);
-            return "Navio adicionado ao porto com sucesso";
-        }
-        else{
-            for(Navio n: navios){
-                if(n.getMatricula().equals(matricula))
-                    return "Navio já existe";
-                else{
-                    Navio navio = new Petroleiro(matricula, nome, comprimento, capacidade);;
-                    navios.add(navio);
-                    return "Navio adicionado ao porto com sucesso";
-                }
-            }
-        }
-        return "Erro ao adicionar navio ao porto";
+    public void adicionaNavio(Navio navio){
+        navios.add(navio);
     }
     
     public int nContentores(){
