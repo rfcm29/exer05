@@ -34,7 +34,7 @@ public class Navio {
     }
 
     /**
-     * Método que retorna o nome
+     * Método que retorna o nome do navio
      * @return
      */
     public String getNome() {
